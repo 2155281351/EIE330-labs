@@ -1,0 +1,26 @@
+digraph "cmdl" {
+label="cmdl";
+rankdir="LR";
+remincross=true;
+n3 [ shape=octagon, label="x", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="xbigy", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="xeqy", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="xsmally", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="y", color="black", fontcolor="black" ];
+c11 [ shape=record, label="{{<p8> A|<p9> B}|$2\n$and|{<p10> Y}}" ];
+c12 [ shape=record, label="{{<p8> A|<p9> B}|$5\n$and|{<p10> Y}}" ];
+c13 [ shape=record, label="{{<p8> A}|$1\n$not|{<p10> Y}}" ];
+c14 [ shape=record, label="{{<p8> A}|$4\n$not|{<p10> Y}}" ];
+c15 [ shape=record, label="{{<p8> A|<p9> B}|$3\n$xnor|{<p10> Y}}" ];
+c13:p10:e -> c11:p9:w [color="black", label=""];
+c14:p10:e -> c12:p8:w [color="black", label=""];
+n3:e -> c11:p8:w [color="black", label=""];
+n3:e -> c14:p8:w [color="black", label=""];
+n3:e -> c15:p8:w [color="black", label=""];
+c11:p10:e -> n4:w [color="black", label=""];
+c15:p10:e -> n5:w [color="black", label=""];
+c12:p10:e -> n6:w [color="black", label=""];
+n7:e -> c12:p9:w [color="black", label=""];
+n7:e -> c13:p8:w [color="black", label=""];
+n7:e -> c15:p9:w [color="black", label=""];
+}

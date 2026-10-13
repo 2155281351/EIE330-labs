@@ -1,0 +1,29 @@
+digraph "fulladd" {
+label="fulladd";
+rankdir="LR";
+remincross=true;
+n2 [ shape=diamond, label="c2", color="black", fontcolor="black" ];
+n3 [ shape=diamond, label="c1", color="black", fontcolor="black" ];
+n4 [ shape=diamond, label="s1", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="cout", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="s", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="cin", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="y", color="black", fontcolor="black" ];
+n9 [ shape=octagon, label="x", color="black", fontcolor="black" ];
+c13 [ shape=record, label="{{<p10> A|<p11> B}|$1\n$or|{<p12> Y}}" ];
+c15 [ shape=record, label="{{<p9> x|<p8> y}|h2\nhalfadd|{<p14> c|<p6> s}}" ];
+c16 [ shape=record, label="{{<p9> x|<p8> y}|h1\nhalfadd|{<p14> c|<p6> s}}" ];
+x0 [shape=box, style=rounded, label="BUF"];
+c13:p12:e -> x0:w:w [color="black", label=""];
+c15:p14:e -> n2:w [color="black", label=""];
+n2:e -> c13:p11:w [color="black", label=""];
+c16:p14:e -> n3:w [color="black", label=""];
+n3:e -> c13:p10:w [color="black", label=""];
+c16:p6:e -> n4:w [color="black", label=""];
+n4:e -> c15:p9:w [color="black", label=""];
+x0:e:e -> n5:w [color="black", label=""];
+c15:p6:e -> n6:w [color="black", label=""];
+n7:e -> c15:p8:w [color="black", label=""];
+n8:e -> c16:p8:w [color="black", label=""];
+n9:e -> c16:p9:w [color="black", label=""];
+}

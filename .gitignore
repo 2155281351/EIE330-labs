@@ -1,0 +1,20 @@
+# Verilator 编译产物
+obj_dir/
+
+# 仿真波形文件
+*.vcd
+
+# 编译生成的中间/目标文件
+*.o
+*.a
+*.d
+*.vvp
+*.out
+
+# 无扩展名的编译可执行文件
+halfadd_sim
+halfadd_tb
+cmdl_sim
+
+# 日志
+*.log
